@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "Bash(dir \"c:\\SystemScanner\" /b)",
+      "Bash(find:*)",
+      "Bash(netsh advfirewall firewall show rule:*)",
+      "Bash(findstr:*)",
+      "Bash(powershell:*)",
+      "Bash(netstat:*)",
+      "Bash(dir version_info.txt app.manifest SystemScanner.spec build.bat)",
+      "Bash(dir nul)",
+      "Bash(del .\\nul)",
+      "Bash(dir /b)",
+      "Bash(git add .)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

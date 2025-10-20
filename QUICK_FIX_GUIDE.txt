@@ -1,0 +1,114 @@
+================================================================================
+SYSTEMSCANNER - WINDOWS SECURITY WARNING FIX
+================================================================================
+
+PROBLEM: SystemScanner.exe triggers Windows Defender virus warning
+
+SOLUTION: Rebuild with anti-virus mitigation features
+
+================================================================================
+QUICK FIX (3 STEPS):
+================================================================================
+
+STEP 1: Rebuild the executable
+-------------------------------
+Open Command Prompt and run:
+
+    cd C:\SystemScanner
+    build.bat
+
+Wait for build to complete (30-60 seconds)
+
+STEP 2: Verify the new executable
+----------------------------------
+Check version information:
+
+    1. Right-click: dist\SystemScanner.exe
+    2. Click: Properties
+    3. Go to: Details tab
+    4. Verify: "System Security Scanner" appears
+
+STEP 3: Test or Whitelist
+--------------------------
+Option A - Test first:
+    cd dist
+    SystemScanner.exe
+
+Option B - Whitelist (if still flagged):
+    1. Open Windows Security
+    2. Virus & threat protection
+    3. Manage settings
+    4. Add exclusion → Folder
+    5. Select: C:\SystemScanner
+
+================================================================================
+WHAT CHANGED:
+================================================================================
+
+✅ Added professional version information
+✅ Added UAC manifest (transparent admin request)
+✅ Enabled console window (more transparent)
+✅ Reduced file size (excluded unused modules)
+✅ Added detailed application description
+
+================================================================================
+EXPECTED RESULTS:
+================================================================================
+
+BEFORE:
+  ❌ "Unknown Publisher" warning
+  ❌ No version info
+  ❌ Windows Security blocks it
+
+AFTER:
+  ✅ Professional version info
+  ✅ Proper company/product name
+  ✅ Lower false positive rate
+  ⚠️  May still need whitelisting
+
+================================================================================
+STILL GETTING WARNINGS?
+================================================================================
+
+This is NORMAL for unsigned executables. Choose one:
+
+1. WHITELIST (Recommended - Free)
+   → See: WHITELIST_INSTRUCTIONS.md
+
+2. RUN FROM SOURCE (Alternative - Free)
+   → cd C:\SystemScanner
+   → python check.py
+
+3. CODE SIGNING (Ultimate - $200-400/year)
+   → Purchase EV certificate
+   → Sign executable
+   → Zero false positives forever
+
+================================================================================
+MORE INFORMATION:
+================================================================================
+
+Detailed guides:
+  - ANTIVIRUS_FIX_SUMMARY.md     (Complete fix summary)
+  - WHITELIST_INSTRUCTIONS.md    (How to whitelist)
+  - REBUILD_EXECUTABLE.md        (Detailed rebuild guide)
+  - ANTIVIRUS_FALSE_POSITIVE_ANALYSIS.md (Technical analysis)
+
+Questions?
+  - Review source code: check.py
+  - This is a READ-ONLY security auditing tool
+  - No malicious code - all operations are defensive
+
+================================================================================
+VERIFICATION:
+================================================================================
+
+After rebuild, the executable should show:
+
+File Description: "System Security Scanner - Defensive Security Audit Tool"
+Product Name:     "System Security Scanner"
+Company:          "System Security Tools"
+Version:          1.0.0.0
+Copyright:        "Copyright (C) 2025 - Licensed for Security Auditing"
+
+================================================================================
