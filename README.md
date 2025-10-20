@@ -208,7 +208,7 @@ Contributions are welcome! Please:
 
 ## License
 
-[Add your license information here]
+Wish I had one
 
 ## Acknowledgments
 
@@ -231,7 +231,7 @@ See individual documentation files for detailed change history:
 
 ## Author
 
-SystemScanner - A comprehensive Windows security auditing tool
+You already know
 
 ---
 
